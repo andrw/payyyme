@@ -7,11 +7,12 @@ import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
+import QRCode from "qrcode.react";
 
 const useStyles = makeStyles({
   root: {
-    minWidth: 250,
-    maxWidth: 350,
+    width: 250,
+    // height: 400,
   },
   media: {
     height: 100,
@@ -22,15 +23,34 @@ const useStyles = makeStyles({
 export default function AccountInfoCard(props) {
   const classes = useStyles();
 
+  let qrImg;
+  if (props.qrCodeUrl) {
+    qrImg = (
+      <QRCode
+        value={props.qrCodeUrl}
+        size={140}
+        level={"H"}
+        includeMargin={true}
+      />
+    );
+  }
+
+  let accountId;
+  if (props.accountIdentifier) {
+    accountId = (
+      <Typography variant="h6">🦸🏻: {props.accountIdentifier}</Typography>
+    );
+  }
+
   return (
     <Card className={classes.root}>
       <CardActionArea>
         <CardMedia className={classes.media} image={props.imageUrl} />
         <CardContent>
-          <Typography variant="subtitle1">{props.accountType}</Typography>
-
+          <Typography variant="h5">{props.accountType}</Typography>
           <Box align="center">
-            <Typography variant="h6">🦸🏻: {props.accountIdentifier}</Typography>
+            {qrImg}
+            {accountId}
           </Box>
         </CardContent>
       </CardActionArea>

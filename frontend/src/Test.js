@@ -44,16 +44,32 @@ export default function SpacingGrid() {
           ))} */}
           <Grid item>
             <AccountInfoCard
-              accountType="Chase QuickPay (Zelle)"
-              accountIdentifier="650-387-1383"
-              imageUrl="/logos/chase.png"
+              accountType="Venmo"
+              accountIdentifier="@andrwyng"
+              imageUrl="/logos/venmo.png"
+              qrCodeUrl="https://venmo.com/andrwyng"
             />
           </Grid>
           <Grid item>
             <AccountInfoCard
-              accountType="Venmo"
-              accountIdentifier="@andrwyng"
-              imageUrl="/logos/venmo.png"
+              accountType="CashApp"
+              accountIdentifier="$andrw"
+              imageUrl="/logos/cashApp.png"
+              qrCodeUrl="https://cash.app/$andrw"
+            />
+          </Grid>
+          <Grid item>
+            <AccountInfoCard
+              accountType="Bitcoin"
+              imageUrl="/logos/bitcoin.png"
+              qrCodeUrl="1D3UXbJfN3WrNCrG9BzN4xcb1EQc7QvM4J"
+            />
+          </Grid>
+          <Grid item>
+            <AccountInfoCard
+              accountType="Chase QuickPay (Zelle)"
+              accountIdentifier="650-387-1383"
+              imageUrl="/logos/chase.png"
             />
           </Grid>
         </Grid>
