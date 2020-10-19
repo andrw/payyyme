@@ -47,7 +47,7 @@ export default function AccountInfoCard(props) {
       <CardActionArea>
         <CardMedia className={classes.media} image={props.imageUrl} />
         <CardContent>
-          <Typography variant="h5">{props.accountType}</Typography>
+          <Typography variant="h6">{props.accountType}</Typography>
           <Box align="center">
             {qrImg}
             {accountId}

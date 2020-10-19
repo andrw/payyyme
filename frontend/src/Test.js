@@ -31,12 +31,12 @@ export default function SpacingGrid() {
   //   };
 
   return (
-    <Grid container className={classes.root} spacing={2}>
+    <Grid container className={classes.root} spacing={2} justify="center">
       <Grid item xs={12}>
         <MyAppBar />
       </Grid>
-      <Grid item xs={12}>
-        <Grid container justify="center" spacing={2}>
+      <Grid item xs={10}>
+        <Grid container spacing={2}>
           {/* {[0, 1, 2].map((value) => (
             <Grid key={value} item>
               <Paper className={classes.paper} />
