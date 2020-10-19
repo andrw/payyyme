@@ -9,7 +9,8 @@ import Typography from "@material-ui/core/Typography";
 import SimpleCard from "./SimpleCard";
 import { AccountInfoCard } from "./AccountInfoCard";
 import { Route, NavLink, Link, BrowserRouter } from "react-router-dom";
-import SpacingGrid from "./Test";
+import PageContainer from "./PageContainer";
+import Test from "./Test";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -38,8 +39,9 @@ export default function App() {
       <BrowserRouter>
         {/* This creates the server connection. */}
         <Route path="/SimpleCard" component={SimpleCard} />
-        <Route path="/test" component={SpacingGrid} />
+        <Route path="/test" component={Test} />
       </BrowserRouter>
+      <PageContainer />
     </React.StrictMode>
   );
 }
