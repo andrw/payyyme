@@ -1,63 +1,45 @@
-/*import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import { Card, Button, Grid } from "@material-ui/core";
+import Container from "@material-ui/core/Container";
+import CardActions from "@material-ui/core/CardActions";
+import CardContent from "@material-ui/core/CardContent";
+import CssBaseline from "@material-ui/core/CssBaseline";
+import Typography from "@material-ui/core/Typography";
+import SimpleCard from "./SimpleCard";
+import { ChaseCard } from "./ChaseCard";
+import { Route, NavLink, Link, BrowserRouter } from "react-router-dom";
+import SpacingGrid from "./Test";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
-
-export default App;
-*/
-
-
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import Card from '@material-ui/core/Card';
-import Container from '@material-ui/core/Container';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
-import Button from '@material-ui/core/Button';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import Typography from '@material-ui/core/Typography';
-import SimpleCard from './SimpleCard';
-import MediaCard from './MediaCard';
-import {
-  Route,
-  NavLink,
-  Link,
-  BrowserRouter
-} from "react-router-dom";
+const useStyles = makeStyles((theme) => ({
+  root: {
+    flexGrow: 1,
+  },
+  paper: {
+    height: 140,
+    width: 100,
+  },
+  control: {
+    padding: theme.spacing(2),
+  },
+}));
 
 export default function App() {
+  const [spacing, setSpacing] = React.useState(2);
+  const classes = useStyles();
+
+  const handleChange = (event) => {
+    setSpacing(Number(event.target.value));
+  };
+
   return (
     // Anything in the UI here is rendered for ALL pages.
     <React.StrictMode>
-    <BrowserRouter>
-    {/* This creates the server connection. */}
-    <Route path="/SimpleCard" component={SimpleCard}/> 
-    </BrowserRouter>
-    <CssBaseline />
-    <Container maxWidth="lg">
-      <MediaCard />
-    </Container>
+      <BrowserRouter>
+        {/* This creates the server connection. */}
+        <Route path="/SimpleCard" component={SimpleCard} />
+        <Route path="/test" component={SpacingGrid} />
+      </BrowserRouter>
     </React.StrictMode>
   );
 }
-
