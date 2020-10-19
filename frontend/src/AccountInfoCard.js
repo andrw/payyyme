@@ -18,7 +18,7 @@ const useStyles = makeStyles({
   },
 });
 
-export default function ChaseCard(props) {
+export default function AccountInfoCard(props) {
   const classes = useStyles();
 
   return (

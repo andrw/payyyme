@@ -7,7 +7,7 @@ import CardContent from "@material-ui/core/CardContent";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Typography from "@material-ui/core/Typography";
 import SimpleCard from "./SimpleCard";
-import { ChaseCard } from "./ChaseCard";
+import { AccountInfoCard } from "./AccountInfoCard";
 import { Route, NavLink, Link, BrowserRouter } from "react-router-dom";
 import SpacingGrid from "./Test";
 

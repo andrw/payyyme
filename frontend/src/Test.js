@@ -6,8 +6,7 @@ import FormControlLabel from "@material-ui/core/FormControlLabel";
 import RadioGroup from "@material-ui/core/RadioGroup";
 import Radio from "@material-ui/core/Radio";
 import Paper from "@material-ui/core/Paper";
-import ChaseCard from "./ChaseCard";
-import VenmoCard from "./VenmoCard";
+import AccountInfoCard from "./AccountInfoCard";
 import MyAppBar from "./MyAppBar";
 
 const useStyles = makeStyles((theme) => ({
@@ -44,14 +43,14 @@ export default function SpacingGrid() {
             </Grid>
           ))} */}
           <Grid item>
-            <ChaseCard
+            <AccountInfoCard
               accountType="Chase QuickPay (Zelle)"
               accountIdentifier="650-387-1383"
               imageUrl="/logos/chase.png"
             />
           </Grid>
           <Grid item>
-            <ChaseCard
+            <AccountInfoCard
               accountType="Venmo"
               accountIdentifier="@andrwyng"
               imageUrl="/logos/venmo.png"
