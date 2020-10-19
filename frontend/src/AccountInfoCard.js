@@ -1,6 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { Card, Box } from "@material-ui/core";
+import { Card, Box, Container } from "@material-ui/core";
 import CardActionArea from "@material-ui/core/CardActionArea";
 import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
@@ -15,6 +15,7 @@ const useStyles = makeStyles({
   },
   media: {
     height: 100,
+    backgroundSize: "contain",
   },
 });
 
