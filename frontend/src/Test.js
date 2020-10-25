@@ -6,7 +6,7 @@ const responseFacebook = (response) => {
   console.log(response);
 };
 
-export default function SpacingGrid() {
+export default function Test() {
   return (
     <FacebookLogin
       appId="509854009052287"
